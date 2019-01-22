@@ -1,0 +1,26 @@
+<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3  col-xs-6  MarginTop">
+  <div class="panel panel-primary">
+    <div class="panel-heading"> Liste des tâches</div>
+    <div class="panel-body">
+     <div class="MarginBottom">
+       <button class="btn btn-danger" (click)="onNewTask()" *ngIf="authService?.isAdmin()"> New Task </button>
+     </div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Task Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let task of tasks">
+          <td>{{task.id}}</td>
+          <td>{{task.taskName}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
